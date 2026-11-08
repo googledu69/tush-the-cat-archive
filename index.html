@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tush - The Fruit Fact Cat Meme 🐱🍑</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf6ec;
+      color: #3d2c2e;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      max-width: 660px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(217, 119, 36, 0.15);
+      overflow: hidden;
+      text-align: center;
+      border: 2px solid #f5dcc4;
+    }
+
+    .header {
+      background-color: #e67e22;
+      color: white;
+      padding: 25px 20px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    .gallery-grid {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 25px 25px 10px;
+    }
+
+    .photo-card {
+      flex: 1 1 240px;
+      max-width: 280px;
+      background-color: #fffaf4;
+      border: 1px solid #f5dcc4;
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 260px;
+      border-radius: 10px;
+      border: 3px solid #f39c12;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      margin-top: 8px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #d35400;
+    }
+
+    .speech-bubble {
+      background-color: #fff3e0;
+      border: 2px dashed #e67e22;
+      border-radius: 15px;
+      padding: 14px 18px;
+      margin: 15px auto 5px;
+      max-width: 440px;
+      font-style: italic;
+      font-weight: 600;
+      color: #b04100;
+      font-size: 1.05rem;
+    }
+
+    .content {
+      padding: 15px 30px 30px;
+    }
+
+    .about {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .lore-box {
+      background-color: #fff8f0;
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .lore-box h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #d35400;
+    }
+
+    .timeline-item {
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 3px solid #f39c12;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #e67e22;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .quote {
+      background-color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-top: 6px;
+      border: 1px solid #f5dcc4;
+      font-style: italic;
+      color: #3d2c2e;
+    }
+
+    .fact-btn {
+      background-color: #e67e22;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .fact-btn:hover {
+      background-color: #d35400;
+    }
+
+    .fact-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Gallery Of Tush Section */
+    .full-gallery-section {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 2px dashed #f5dcc4;
+    }
+
+    .full-gallery-section h2 {
+      margin: 0 0 16px;
+      font-size: 1.4rem;
+      color: #d35400;
+    }
+
+    .full-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      background-color: #fffaf4;
+      border: 1px solid #f5dcc4;
+      border-radius: 12px;
+      padding: 8px;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #f39c12;
+      display: block;
+    }
+
+    .gallery-item-title {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #7f5539;
+    }
+
+    /* Special Aura Card Styling */
+    .gallery-item.aura-edition {
+      grid-column: 1 / -1;
+      max-width: 300px;
+      width: 100%;
+      justify-self: center;
+      background-color: #fffdf5;
+      border: 2px solid #f1c40f;
+      box-shadow: 0 0 15px rgba(241, 196, 15, 0.35);
+    }
+
+    .gallery-item.aura-edition img {
+      border-color: #f1c40f;
+    }
+
+    .gallery-item.aura-edition .gallery-item-title {
+      color: #b77900;
+      font-weight: 700;
+    }
+
+    @media (max-width: 500px) {
+      .full-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item.aura-edition {
+        max-width: 100%;
+      }
+    }
+
+    .footer {
+      background-color: #fcebd8;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: #7f5539;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h1>🐱 Tush Lore Archive</h1>
+      <p>The Legendary Fruit-Fact Meme Cat</p>
+    </div>
+
+    <!-- Top Featured Eras -->
+    <div class="gallery-grid">
+      <div class="photo-card">
+        <img src="cat.jpeg" alt="Original 2025 photo of Tush">
+        <div class="photo-caption">Late 2025 — The Original</div>
+      </div>
+
+      <div class="photo-card">
+        <img src="tush.jpeg" alt="Early 2026 remake photo of Tush squinting">
+        <div class="photo-caption">Early 2026 — The Sequel</div>
+      </div>
+    </div>
+
+    <div style="padding: 0 25px;">
+      <div class="speech-bubble" id="quoteDisplay">
+        "Tu știai că nectarinele au vitamina C?"
+      </div>
+    </div>
+
+    <div class="content">
+      <p class="about">
+        <strong>Tush</strong> is the iconic orange tabby meme created by a group of friends. Known for dropping ultra-specific botanical trivia out of nowhere, Tush became an instant legend thanks to the Character AI video creation tool.
+      </p>
+
+      <div class="lore-box">
+        <h2>📜 Official Meme Timeline</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Late 2025 — The Origin</div>
+          <p style="margin: 4px 0;">Started as an inside joke. In the original Character AI video, Tush stares intently at a fluffy pretzel and drops his first iconic line:</p>
+          <div class="quote">"Tu știai că nectarinele au vitamina C?"</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Early 2026 — The Sequel</div>
+          <p style="margin: 4px 0;">Remade with a brand-new photo using the same AI tool, Tush returned with an urgent PSA about exotic produce availability:</p>
+          <div class="quote">"Tu știai că fructul dragonui este aproape de imposibil de gasit in romania?"</div>
+        </div>
+      </div>
+
+      <button class="fact-btn" onclick="newFact()">🎤 Hear Another Tush Quote</button>
+
+      <!-- Bottom Complete Gallery -->
+      <div class="full-gallery-section">
+        <h2>🖼️ Gallery Of Tush</h2>
+        <div class="full-gallery-grid">
+          <div class="gallery-item">
+            <img src="cat.jpeg" alt="Original Tush">
+            <div class="gallery-item-title">The Original Tush</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="tush.jpeg" alt="Sequel Tush">
+            <div class="gallery-item-title">Squinting Tush</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="tushmarble.jpeg" alt="Tush Marble on table">
+            <div class="gallery-item-title">Tush Marble</div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="tushmarblemain.jpeg" alt="Tush Marble Main on track">
+            <div class="gallery-item-title">Tush Marble Main</div>
+          </div>
+
+          <div class="gallery-item aura-edition">
+            <img src="electricauratushmarble.jpeg" alt="Electric Aura Tush Marble">
+            <div class="gallery-item-title">⚡ Electric Aura Tush Marble</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Tush Meme Archive • Est. Late 2025 🥨🐉🔮⚡
+    </div>
+  </div>
+
+  <script>
+    const quotes = [
+      '"Tu știai că nectarinele au vitamina C?"',
+      '"Tu știai că fructul dragonui este aproape de imposibil de gasit in romania?"'
+    ];
+
+    let currentIndex = 0;
+
+    function newFact() {
+      currentIndex = (currentIndex + 1) % quotes.length;
+      document.getElementById('quoteDisplay').textContent = quotes[currentIndex];
+    }
+  </script>
+
+</body>
+</html>
