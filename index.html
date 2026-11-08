@@ -160,6 +160,72 @@
       transform: scale(0.97);
     }
 
+    /* Dush Brother Section */
+    .brother-section {
+      margin-top: 28px;
+      padding: 20px;
+      background-color: #fff6eb;
+      border: 2px solid #f3c191;
+      border-radius: 15px;
+      text-align: left;
+    }
+
+    .brother-section h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      color: #c0392b;
+      text-align: center;
+    }
+
+    .brother-card {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .brother-card img {
+      width: 190px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #e67e22;
+      flex-shrink: 0;
+    }
+
+    .brother-info p {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .brother-facts {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #4a3537;
+    }
+
+    .brother-facts li {
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 540px) {
+      .brother-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brother-card img {
+        width: 100%;
+        max-width: 240px;
+      }
+
+      .brother-facts {
+        text-align: left;
+      }
+    }
+
     /* Gallery Of Tush Section */
     .full-gallery-section {
       margin-top: 28px;
@@ -239,9 +305,32 @@
       font-weight: 700;
     }
 
+    /* Dush Card Centered in Gallery */
+    .gallery-item.brother-edition {
+      grid-column: 1 / -1;
+      max-width: 300px;
+      width: 100%;
+      justify-self: center;
+      background-color: #fff6eb;
+      border: 2px solid #e67e22;
+    }
+
+    .gallery-item.brother-edition img {
+      border-color: #e67e22;
+    }
+
+    .gallery-item.brother-edition .gallery-item-title {
+      color: #c0392b;
+      font-weight: 700;
+    }
+
     @media (max-width: 500px) {
       .full-gallery-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-item.brother-edition {
+        max-width: 100%;
       }
     }
 
@@ -303,8 +392,28 @@
 
       <button class="fact-btn" onclick="newFact()">🎤 Hear Another Tush Quote</button>
 
+      <!-- Dush Brother Section (Before Gallery) -->
+      <div class="brother-section">
+        <h2>🐾 Meet Dush — Tush's Brother</h2>
+        <div class="brother-card">
+          <img src="dush.jpeg" alt="Dush, Tush's orange and white brother">
+          <div class="brother-info">
+            <p>
+              <strong>Dush</strong> is Tush's orange-and-white brother who rose to meme fame on <strong>November 25, 2025</strong>. Approaching his 2nd birthday, he carries true street-cat energy.
+            </p>
+            <ul class="brother-facts">
+              <li><strong>Meme Debut:</strong> Became a meme on November 25, 2025.</li>
+              <li><strong>Age:</strong> Turning 2 years old.</li>
+              <li><strong>Origin Story:</strong> Used to live on the streets before being rescued.</li>
+              <li><strong>Warning:</strong> Gets aggressive if you touch his leg.</li>
+              <li><strong>Fun Fact:</strong> Once went on an outdoor adventure on a leash.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!-- Bottom Complete Gallery -->
-      <div class="full-gallery-section">
+              <div class="full-gallery-section">
         <h2>🖼️ Gallery Of Tush</h2>
         <div class="full-gallery-grid">
           <div class="gallery-item">
@@ -336,12 +445,17 @@
             <img src="tushwindows10.jpeg" alt="Windows10 Tush Marble">
             <div class="gallery-item-title">🪟 Windows10 Tush Marble</div>
           </div>
+
+          <div class="gallery-item brother-edition">
+            <img src="dush.jpeg" alt="Dush-Tush's brother">
+            <div class="gallery-item-title">🐾 Dush-Tush's brother</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      Tush Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟
+      Tush & Dush Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟🐾
     </div>
   </div>
 
