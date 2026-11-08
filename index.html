@@ -209,10 +209,6 @@
 
     /* Special Aura Card Styling */
     .gallery-item.aura-edition {
-      grid-column: 1 / -1;
-      max-width: 300px;
-      width: 100%;
-      justify-self: center;
       background-color: #fffdf5;
       border: 2px solid #f1c40f;
       box-shadow: 0 0 15px rgba(241, 196, 15, 0.35);
@@ -227,13 +223,25 @@
       font-weight: 700;
     }
 
+    /* Windows 10 Edition Card Styling */
+    .gallery-item.windows-edition {
+      background-color: #f2f8ff;
+      border: 2px solid #0078d7;
+      box-shadow: 0 0 15px rgba(0, 120, 215, 0.25);
+    }
+
+    .gallery-item.windows-edition img {
+      border-color: #0078d7;
+    }
+
+    .gallery-item.windows-edition .gallery-item-title {
+      color: #005a9e;
+      font-weight: 700;
+    }
+
     @media (max-width: 500px) {
       .full-gallery-grid {
         grid-template-columns: 1fr;
-      }
-
-      .gallery-item.aura-edition {
-        max-width: 100%;
       }
     }
 
@@ -323,12 +331,17 @@
             <img src="electricauratushmarble.jpeg" alt="Electric Aura Tush Marble">
             <div class="gallery-item-title">⚡ Electric Aura Tush Marble</div>
           </div>
+
+          <div class="gallery-item windows-edition">
+            <img src="tushwindows10.jpeg" alt="Windows10 Tush Marble">
+            <div class="gallery-item-title">🪟 Windows10 Tush Marble</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      Tush Meme Archive • Est. Late 2025 🥨🐉🔮⚡
+      Tush Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟
     </div>
   </div>
 
