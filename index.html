@@ -160,9 +160,8 @@
       transform: scale(0.97);
     }
 
-    /* Dush Brother Section */
     .brother-section {
-      margin-top: 28px;
+      margin-top: 24px;
       padding: 20px;
       background-color: #fff6eb;
       border: 2px solid #f3c191;
@@ -210,23 +209,6 @@
       margin-bottom: 4px;
     }
 
-    @media (max-width: 540px) {
-      .brother-card {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .brother-card img {
-        width: 100%;
-        max-width: 240px;
-      }
-
-      .brother-facts {
-        text-align: left;
-      }
-    }
-
-    /* Gallery Of Tush Section */
     .full-gallery-section {
       margin-top: 28px;
       padding-top: 22px;
@@ -273,7 +255,6 @@
       color: #7f5539;
     }
 
-    /* Special Aura Card Styling */
     .gallery-item.aura-edition {
       background-color: #fffdf5;
       border: 2px solid #f1c40f;
@@ -289,7 +270,6 @@
       font-weight: 700;
     }
 
-    /* Windows 10 Edition Card Styling */
     .gallery-item.windows-edition {
       background-color: #f2f8ff;
       border: 2px solid #0078d7;
@@ -305,12 +285,7 @@
       font-weight: 700;
     }
 
-    /* Dush Card Centered in Gallery */
     .gallery-item.brother-edition {
-      grid-column: 1 / -1;
-      max-width: 300px;
-      width: 100%;
-      justify-self: center;
       background-color: #fff6eb;
       border: 2px solid #e67e22;
     }
@@ -324,13 +299,25 @@
       font-weight: 700;
     }
 
+    @media (max-width: 540px) {
+      .brother-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brother-card img {
+        width: 100%;
+        max-width: 240px;
+      }
+
+      .brother-facts {
+        text-align: left;
+      }
+    }
+
     @media (max-width: 500px) {
       .full-gallery-grid {
         grid-template-columns: 1fr;
-      }
-
-      .gallery-item.brother-edition {
-        max-width: 100%;
       }
     }
 
@@ -350,7 +337,6 @@
       <p>The Legendary Fruit-Fact Meme Cat</p>
     </div>
 
-    <!-- Top Featured Eras -->
     <div class="gallery-grid">
       <div class="photo-card">
         <img src="cat.jpeg" alt="Original 2025 photo of Tush">
@@ -392,7 +378,6 @@
 
       <button class="fact-btn" onclick="newFact()">🎤 Hear Another Tush Quote</button>
 
-      <!-- Dush Brother Section (Before Gallery) -->
       <div class="brother-section">
         <h2>🐾 Meet Dush — Tush's Brother</h2>
         <div class="brother-card">
@@ -411,9 +396,27 @@
           </div>
         </div>
       </div>
+<!-- LIPESTE PARTEA A DOUA IMEDIAT SUB ACEASTA LINIE -->
+<!-- AICI INCEPE PARTEA A DOUA -->
+      <div class="brother-section">
+        <h2>🎸 Meet Crepus — Tush's Other Brother</h2>
+        <div class="brother-card">
+          <img src="crepus.jpeg" alt="Crepus, the wide-eyed orange tabby brother">
+          <div class="brother-info">
+            <p>
+              <strong>Crepus</strong> is another legendary orange tabby in the Tush family, originally known on Instagram as <strong>Potato</strong> before being discovered in <strong>October 2025</strong>.
+            </p>
+            <ul class="brother-facts">
+              <li><strong>Name Origin:</strong> Renamed "Crepus" from a reversed, shortened version of <em>Supercalifragilisticexpialidocious</em>.</li>
+              <li><strong>Social Media Rise:</strong> First gained fame as Potato on Instagram before crossing over to TikTok in October 2025.</li>
+              <li><strong>Iconic Meme:</strong> Starred in a Character AI video saying, <em>"Hey did you know that Kurt Cobain died in the year of 1994? It's pretty sad that he died"</em>.</li>
+              <li><strong>Signature Soundtrack:</strong> His viral meme video features Nirvana's <em>"Heart-Shaped Box"</em> playing in the background.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <!-- Bottom Complete Gallery -->
-              <div class="full-gallery-section">
+      <div class="full-gallery-section">
         <h2>🖼️ Gallery Of Tush</h2>
         <div class="full-gallery-grid">
           <div class="gallery-item">
@@ -450,12 +453,17 @@
             <img src="dush.jpeg" alt="Dush-Tush's brother">
             <div class="gallery-item-title">🐾 Dush-Tush's brother</div>
           </div>
+
+          <div class="gallery-item brother-edition">
+            <img src="crepus.jpeg" alt="Crepus-Tush's brother">
+            <div class="gallery-item-title">🎸 Crepus-Tush's brother</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      Tush & Dush Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟🐾
+      Tush, Dush & Crepus Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟🐾🎸
     </div>
   </div>
 
