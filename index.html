@@ -209,6 +209,20 @@
       margin-bottom: 4px;
     }
 
+    .brother-section.dead-edition {
+      background-color: #f4f4f6;
+      border-color: #b0b3b8;
+    }
+
+    .brother-section.dead-edition h2 {
+      color: #4a4d52;
+    }
+
+    .brother-section.dead-edition .brother-card img {
+      border-color: #7f8c8d;
+      filter: grayscale(20%);
+    }
+
     .full-gallery-section {
       margin-top: 28px;
       padding-top: 22px;
@@ -299,6 +313,20 @@
       font-weight: 700;
     }
 
+    .gallery-item.dead-edition {
+      background-color: #f4f4f6;
+      border: 2px solid #b0b3b8;
+    }
+
+    .gallery-item.dead-edition img {
+      border-color: #7f8c8d;
+    }
+
+    .gallery-item.dead-edition .gallery-item-title {
+      color: #4a4d52;
+      font-weight: 700;
+    }
+
     @media (max-width: 540px) {
       .brother-card {
         flex-direction: column;
@@ -377,7 +405,6 @@
       </div>
 
       <button class="fact-btn" onclick="newFact()">🎤 Hear Another Tush Quote</button>
-
       <div class="brother-section">
         <h2>🐾 Meet Dush — Tush's Brother</h2>
         <div class="brother-card">
@@ -396,8 +423,7 @@
           </div>
         </div>
       </div>
-<!-- LIPESTE PARTEA A DOUA IMEDIAT SUB ACEASTA LINIE -->
-<!-- AICI INCEPE PARTEA A DOUA -->
+
       <div class="brother-section">
         <h2>🎸 Meet Crepus — Tush's Other Brother</h2>
         <div class="brother-card">
@@ -411,6 +437,23 @@
               <li><strong>Social Media Rise:</strong> First gained fame as Potato on Instagram before crossing over to TikTok in October 2025.</li>
               <li><strong>Iconic Meme:</strong> Starred in a Character AI video saying, <em>"Hey did you know that Kurt Cobain died in the year of 1994? It's pretty sad that he died"</em>.</li>
               <li><strong>Signature Soundtrack:</strong> His viral meme video features Nirvana's <em>"Heart-Shaped Box"</em> playing in the background.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="brother-section dead-edition">
+        <h2>🕊️ GUSH — The DEAD Brother</h2>
+        <div class="brother-card">
+          <img src="gush.jpeg" alt="Gush lying in the grass">
+          <div class="brother-info">
+            <p>
+              <strong>Gush</strong> is remembered as the tragic fallen brother of the Tush family, whose short story began in an abandoned building in Bucharest.
+            </p>
+            <ul class="brother-facts">
+              <li><strong>Discovery:</strong> Found in an abandoned 13-floor building somewhere in Bucharest in September 2026.</li>
+              <li><strong>Tragic Fate:</strong> Later in October 2026, he was sadly hit by a car and passed away.</li>
+              <li><strong>Archive Tribute:</strong> Honored here with his final moments and his last known photo alive.</li>
             </ul>
           </div>
         </div>
@@ -458,19 +501,30 @@
             <img src="crepus.jpeg" alt="Crepus-Tush's brother">
             <div class="gallery-item-title">🎸 Crepus-Tush's brother</div>
           </div>
+
+          <div class="gallery-item dead-edition">
+            <img src="gush.jpeg" alt="Gush - The Dead Brother">
+            <div class="gallery-item-title">🕊️ Gush — The Dead Brother</div>
+          </div>
+
+          <div class="gallery-item dead-edition">
+            <img src="gushalive.jpeg" alt="Last photo of Gush alive">
+            <div class="gallery-item-title">📸 Gush — Last Photo Alive</div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
-      Tush, Dush & Crepus Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟🐾🎸
+      Tush, Dush, Crepus & Gush (R.I.P.) Meme Archive • Est. Late 2025 🥨🐉🔮⚡🪟🐾🎸🕊️
     </div>
   </div>
 
   <script>
     const quotes = [
       '"Tu știai că nectarinele au vitamina C?"',
-      '"Tu știai că fructul dragonui este aproape de imposibil de gasit in romania?"'
+      '"Tu știai că fructul dragonui este aproape de imposibil de gasit in romania?"',
+      '"Hey did you know that Kurt Cobain died in the year of 1994? It\'s pretty sad that he died"'
     ];
 
     let currentIndex = 0;
